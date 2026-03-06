@@ -333,73 +333,46 @@ export default function Home() {
             <motion.div variants={fadeUp}>
               <Link
                 href="/accomplishments"
-                className="block relative rounded-xl overflow-hidden text-white hover:shadow-lg transition group h-64"
+                className="block rounded-2xl p-6 text-white shadow-lg hover:shadow-2xl transition-shadow duration-300 group h-64 flex flex-col justify-end bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700"
               >
-                <Image
-                  src="/images/nature-valley.jpg"
-                  alt="Valley landscape"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <FileText className="w-8 h-8 mb-3" />
-                  <h3 className="text-lg font-bold mb-1">Accomplishments</h3>
-                  <p className="text-sm text-blue-100">
-                    Milestones and funded projects since 2006.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
-                    View all <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
+                <FileText className="w-8 h-8 mb-3 drop-shadow-md" />
+                <h3 className="text-lg font-bold mb-1">Accomplishments</h3>
+                <p className="text-sm text-blue-100">
+                  Milestones and funded projects since 2006.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                  View all <ArrowRight className="w-4 h-4" />
+                </span>
               </Link>
             </motion.div>
             <motion.div variants={fadeUp}>
               <Link
                 href="/board-meeting"
-                className="block relative rounded-xl overflow-hidden text-white hover:shadow-lg transition group h-64"
+                className="block rounded-2xl p-6 text-white shadow-lg hover:shadow-2xl transition-shadow duration-300 group h-64 flex flex-col justify-end bg-gradient-to-br from-teal-400 via-cyan-500 to-blue-600"
               >
-                <Image
-                  src="/images/community-meeting.jpg"
-                  alt="Community meeting"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/50 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <Calendar className="w-8 h-8 mb-3" />
-                  <h3 className="text-lg font-bold mb-1">Board Meetings</h3>
-                  <p className="text-sm text-green-100">
-                    Monthly on the 4th Monday at 1:30 PM.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
-                    View schedule <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
+                <Calendar className="w-8 h-8 mb-3 drop-shadow-md" />
+                <h3 className="text-lg font-bold mb-1">Board Meetings</h3>
+                <p className="text-sm text-cyan-100">
+                  Monthly on the 4th Monday at 1:30 PM.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                  View schedule <ArrowRight className="w-4 h-4" />
+                </span>
               </Link>
             </motion.div>
             <motion.div variants={fadeUp}>
               <Link
                 href="/voting-members"
-                className="block relative rounded-xl overflow-hidden text-white hover:shadow-lg transition group h-64"
+                className="block rounded-2xl p-6 text-white shadow-lg hover:shadow-2xl transition-shadow duration-300 group h-64 flex flex-col justify-end bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600"
               >
-                <Image
-                  src="/images/irrigation-farm.jpg"
-                  alt="Agricultural irrigation"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-sky-900/90 via-sky-900/50 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <Users className="w-8 h-8 mb-3" />
-                  <h3 className="text-lg font-bold mb-1">Voting Members</h3>
-                  <p className="text-sm text-sky-100">
-                    18+ water districts, cities, and tribal communities.
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
-                    View members <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
+                <Users className="w-8 h-8 mb-3 drop-shadow-md" />
+                <h3 className="text-lg font-bold mb-1">Voting Members</h3>
+                <p className="text-sm text-sky-100">
+                  18+ water districts, cities, and tribal communities.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                  View members <ArrowRight className="w-4 h-4" />
+                </span>
               </Link>
             </motion.div>
           </motion.div>
