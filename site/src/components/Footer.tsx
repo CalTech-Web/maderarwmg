@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
@@ -7,7 +8,16 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Madera RWMG</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/images/logo.webp"
+                alt="Madera RWMG Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain brightness-0 invert"
+              />
+              <h3 className="text-white font-bold text-lg">Madera RWMG</h3>
+            </div>
             <p className="text-sm leading-relaxed">
               Facilitating coordination, collaboration, and communication for
               comprehensive water resource management in the Madera Region.
