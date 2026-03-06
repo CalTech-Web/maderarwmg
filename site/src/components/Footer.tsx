@@ -95,14 +95,17 @@ export function Footer() {
             <Link href="/terms-of-service" className="hover:text-white transition">
               Terms of Service
             </Link>
-            <a
-              href="https://caltechweb.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-            >
-              Powered by CalTech Web
-            </a>
+            <span>
+              Built by{" "}
+              <a
+                href="https://caltechweb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition"
+              >
+                CalTech Web
+              </a>
+            </span>
           </div>
         </div>
       </div>
