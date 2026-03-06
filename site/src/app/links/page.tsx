@@ -87,7 +87,7 @@ export default function LinksPage() {
           src="/images/water-links.jpg"
           alt="Water resources"
           fill
-          className="object-cover opacity-20"
+          className="object-cover object-bottom opacity-20"
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
