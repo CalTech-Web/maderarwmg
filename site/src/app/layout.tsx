@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Facilitating coordination, collaboration, and communication for comprehensive water resource management in the Madera Region.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
       { url: "/icon.png", sizes: "192x192", type: "image/png" },
     ],
     apple: "/apple-icon.png",
