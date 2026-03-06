@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Droplets, Shield, Leaf, Waves } from "lucide-react";
 
 const fadeUp = {
@@ -53,8 +54,14 @@ const colorMap: Record<string, { bg: string; icon: string; border: string }> = {
 export default function ProjectsPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 text-white py-20">
+        <Image
+          src="/images/dam-water.jpg"
+          alt="Water infrastructure"
+          fill
+          className="object-cover opacity-20"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.h1
               variants={fadeUp}

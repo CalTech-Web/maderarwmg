@@ -15,6 +15,7 @@ import {
   Shield,
   Globe,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const fadeUp = {
@@ -88,10 +89,13 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 text-white">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.3),transparent_70%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(14,165,233,0.2),transparent_60%)]" />
-        </div>
+        <Image
+          src="/images/hero-landscape.jpg"
+          alt="California agricultural landscape"
+          fill
+          className="object-cover opacity-20"
+          priority
+        />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
           <motion.div
             initial="hidden"
@@ -214,27 +218,67 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="max-w-4xl mx-auto text-center"
+            className="grid md:grid-cols-2 gap-12 items-center"
           >
-            <motion.div variants={fadeUp}>
-              <Globe className="w-12 h-12 text-blue-600 mx-auto mb-6" />
+            <div>
+              <motion.div variants={fadeUp}>
+                <Globe className="w-12 h-12 text-blue-600 mb-6" />
+              </motion.div>
+              <motion.h2
+                variants={fadeUp}
+                className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6"
+              >
+                Our Mission
+              </motion.h2>
+              <motion.p
+                variants={fadeUp}
+                className="text-lg text-gray-600 leading-relaxed"
+              >
+                The RWMG will facilitate future coordination, collaboration, and
+                communication for comprehensive management of water resources in the
+                Madera Region. We ensure governance, development, planning, funding,
+                and implementation to provide optimal and affordable water supplies
+                and facilities now and in the future.
+              </motion.p>
+            </div>
+            <motion.div variants={fadeUp} className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/water-river.jpg"
+                  alt="River flowing through the Madera Region"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-[350px]"
+                />
+              </div>
             </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6"
-            >
-              Our Mission
-            </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-gray-600 leading-relaxed"
-            >
-              The RWMG will facilitate future coordination, collaboration, and
-              communication for comprehensive management of water resources in the
-              Madera Region. We ensure governance, development, planning, funding, and
-              implementation to provide optimal and affordable water supplies and
-              facilities now and in the future.
-            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Image Banner */}
+      <section className="relative h-64 sm:h-80">
+        <Image
+          src="/images/dam-water.jpg"
+          alt="Water reservoir and dam infrastructure"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-blue-900/60 flex items-center justify-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center text-white px-4"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3">
+              Protecting Our Water Future
+            </h2>
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+              Over $9.4 million in grants awarded for regional water resource projects
+              serving the Madera community.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -289,48 +333,73 @@ export default function Home() {
             <motion.div variants={fadeUp}>
               <Link
                 href="/accomplishments"
-                className="block bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 text-white hover:shadow-lg transition group"
+                className="block relative rounded-xl overflow-hidden text-white hover:shadow-lg transition group h-64"
               >
-                <FileText className="w-8 h-8 mb-3" />
-                <h3 className="text-lg font-bold mb-2">Accomplishments</h3>
-                <p className="text-sm text-blue-100">
-                  View our timeline of milestones and funded projects since 2006.
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium mt-4 group-hover:gap-2 transition-all">
-                  View all <ArrowRight className="w-4 h-4" />
-                </span>
+                <Image
+                  src="/images/nature-valley.jpg"
+                  alt="Valley landscape"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <FileText className="w-8 h-8 mb-3" />
+                  <h3 className="text-lg font-bold mb-1">Accomplishments</h3>
+                  <p className="text-sm text-blue-100">
+                    Milestones and funded projects since 2006.
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                    View all <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
               </Link>
             </motion.div>
             <motion.div variants={fadeUp}>
               <Link
                 href="/board-meeting"
-                className="block bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-6 text-white hover:shadow-lg transition group"
+                className="block relative rounded-xl overflow-hidden text-white hover:shadow-lg transition group h-64"
               >
-                <Calendar className="w-8 h-8 mb-3" />
-                <h3 className="text-lg font-bold mb-2">Board Meetings</h3>
-                <p className="text-sm text-green-100">
-                  Monthly meetings on the 4th Monday at 1:30 PM. View agendas and
-                  minutes.
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium mt-4 group-hover:gap-2 transition-all">
-                  View schedule <ArrowRight className="w-4 h-4" />
-                </span>
+                <Image
+                  src="/images/community-meeting.jpg"
+                  alt="Community meeting"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/50 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <Calendar className="w-8 h-8 mb-3" />
+                  <h3 className="text-lg font-bold mb-1">Board Meetings</h3>
+                  <p className="text-sm text-green-100">
+                    Monthly on the 4th Monday at 1:30 PM.
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                    View schedule <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
               </Link>
             </motion.div>
             <motion.div variants={fadeUp}>
               <Link
                 href="/voting-members"
-                className="block bg-gradient-to-br from-sky-600 to-sky-800 rounded-xl p-6 text-white hover:shadow-lg transition group"
+                className="block relative rounded-xl overflow-hidden text-white hover:shadow-lg transition group h-64"
               >
-                <Users className="w-8 h-8 mb-3" />
-                <h3 className="text-lg font-bold mb-2">Voting Members</h3>
-                <p className="text-sm text-sky-100">
-                  18+ member organizations including water districts, cities, and
-                  tribal communities.
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium mt-4 group-hover:gap-2 transition-all">
-                  View members <ArrowRight className="w-4 h-4" />
-                </span>
+                <Image
+                  src="/images/irrigation-farm.jpg"
+                  alt="Agricultural irrigation"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sky-900/90 via-sky-900/50 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <Users className="w-8 h-8 mb-3" />
+                  <h3 className="text-lg font-bold mb-1">Voting Members</h3>
+                  <p className="text-sm text-sky-100">
+                    18+ water districts, cities, and tribal communities.
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium mt-3 group-hover:gap-2 transition-all">
+                    View members <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
               </Link>
             </motion.div>
           </motion.div>
