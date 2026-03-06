@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   title: "Madera Regional Water Management Group",
   description:
     "Facilitating coordination, collaboration, and communication for comprehensive water resource management in the Madera Region.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
