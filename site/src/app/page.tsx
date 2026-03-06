@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { WaterCanvas } from "@/components/WaterCanvas";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -96,7 +97,8 @@ export default function Home() {
           className="object-cover opacity-20"
           priority
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+        <WaterCanvas />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
           <motion.div
             initial="hidden"
             animate="visible"
