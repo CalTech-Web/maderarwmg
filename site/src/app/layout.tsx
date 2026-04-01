@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -10,9 +11,30 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Madera Regional Water Management Group",
+  title: {
+    default: "Madera Regional Water Management Group",
+    template: "%s | Madera RWMG",
+  },
   description:
     "Facilitating coordination, collaboration, and communication for comprehensive water resource management in the Madera Region.",
+  metadataBase: new URL("https://maderarwmg.vercel.app"),
+  openGraph: {
+    title: "Madera Regional Water Management Group",
+    description:
+      "Facilitating coordination, collaboration, and communication for comprehensive water resource management in the Madera Region.",
+    url: "https://maderarwmg.vercel.app",
+    siteName: "Madera RWMG",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/hero-landscape.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Madera Regional Water Management Group",
+      },
+    ],
+  },
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
@@ -33,6 +55,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
       </body>
     </html>
   );
